@@ -1,0 +1,90 @@
+@media screen and (min-width: 400px) {
+	.App { 
+		  text-align: center;
+		  width: 399px;
+		  align-items: center;
+		  justify-content: space-between;
+		  flex-direction: column;
+		  display:flex;
+		  margin:auto;
+		border: 1px solid rgba(70,61,62,0.15);
+	} 
+}
+
+.App {
+  text-align: center;
+  height: 667px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  display:flex;
+  margin:auto;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex:2;
+  width:100%;
+}
+
+.App-body {
+  display: flex;
+	width: 100%;
+	background-color:rgb(70,61,62);
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+	  flex:3;
+	color:white;
+
+}
+.Text-body {
+	color: white;	
+}
+.App-footer {
+  display: flex;
+	width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+	  flex:2;
+
+
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.myname {
+}
+.mypic{
+}
+p {
+	margin: 0;
+}
+
+.holiday {
+	flex-direction:row;
+	width:100%;
+	height:40%;
+	justify-content:space-around;
+	align-items:center;
+}
