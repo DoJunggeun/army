@@ -36,7 +36,7 @@ class Header extends Component {
 
 class Body extends Component {
 	render() {
-		let per = RestPercent('2020-02-24T00:00:00','2021-09-02T00:00:00');
+		let per = RestPercent('2020-02-24T14:00:00','2021-09-02T00:00:00');
 		return (
 			<div className="App-body">
 				<span className="Text-body">전역 D-{RestDays()}</span>
@@ -137,9 +137,9 @@ function RestPercent(_start, _end) {
 	return per
 }
 let holidays = [
-	['2021-08-08T08:00:00','주말외출',true],
-	['2021-08-14T17:30:00','평일외출',false],
-	['2021-08-31T17:30:00','평일외출',true],
-	['2021-09-04T17:30:00','평일외출',false],
-	['2021-09-09T08:00:00','휴가',false]
+	['2020-08-08T08:00:00','주말외출',true],
+	['2020-08-14T17:30:00','평일외출',false],
+	['2020-08-31T17:30:00','평일외출',true],
+	['2020-09-04T17:30:00','평일외출',false],
+	['2020-09-09T08:00:00','휴가',false]
 ]
