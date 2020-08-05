@@ -133,7 +133,7 @@ function RestPercent(_start, _end) {
 	const today = new Date();
 	const start = new Date(_start);
 	const end = new Date(_end);
-	let per = ((today.getTime()-start.getTime())/(end.getTime()-start.getTime())*100).toFixed(2);
+	let per = ((32400000+today.getTime()-start.getTime())/(end.getTime()-start.getTime())*100).toFixed(2);
 	return per
 }
 let holidays = [
