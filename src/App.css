@@ -1,24 +1,18 @@
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 420px) {
 	.App { 
-		  text-align: center;
-		  width: 399px;
-		  align-items: center;
-		  justify-content: space-between;
-		  flex-direction: column;
-		  display:flex;
-		  margin:auto;
-		border: 1px solid rgba(70,61,62,0.15);
+		  width: 420px;
 	} 
 }
 
 .App {
+  height:100%;
   text-align: center;
-  height: 667px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   display:flex;
   margin:auto;
+  background-color:rgba(75,66,67,0.45);
 }
 
 .App-logo {
@@ -31,8 +25,8 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  flex:2;
   width:100%;
+	height: 30%;
 }
 
 .App-body {
@@ -40,26 +34,40 @@
 	width: 100%;
 	background-color:rgb(70,61,62);
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-	  flex:3;
 	color:white;
+	height: 40%;
 
 }
 .Text-body {
 	color: white;	
+	margin:8px;
 }
 .App-footer {
+	height: 30%;
   display: flex;
 	width: 100%;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-	  flex:2;
-
-
 }
 
+/* @media screen and (min-height:781px) {
+	.App-body {
+		height:312px;
+
+	}
+	.App-header {
+		height:233px;
+
+	}
+	.App-footer {
+		height:100%;
+	}
+
+}
+ */
 .App-link {
   color: #61dafb;
 }
@@ -82,9 +90,26 @@ p {
 }
 
 .holiday {
+	display:flex;
 	flex-direction:row;
 	width:100%;
 	height:40%;
 	justify-content:space-around;
-	align-items:center;
+}
+
+#plans {
+	height:40px;
+	width:120px;
+	border-radius:5px;
+	border:0px solid white;
+	background-color:lightgreen;
+	color:rgb(70,61,62);
+	font-weight:600;
+	margin:10px;
+}
+#plans:hover{
+	border:0px solid white;
+	background-color:white;
+	color:rgb(70,61,62);
+	font-weight:500;
 }
