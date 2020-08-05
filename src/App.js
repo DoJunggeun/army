@@ -52,9 +52,9 @@ class Body extends Component {
 
 class Holiday extends Component {
 	render(){
-		let perholi = RestPercent('2020-07-26T20:00:00','2021-08-08T08:00:00');;
-		let peryerin = RestPercent('2020-07-26T20:00:00','2021-08-08T08:00:00');;
-		let perhg = RestPercent('2020-06-01T20:00:00','2021-09-09T08:00:00');;
+		let perholi = RestPercent('2020-07-26T20:00:00','2020-08-08T08:00:00');;
+		let peryerin = RestPercent('2020-07-26T20:00:00','2020-08-08T08:00:00');;
+		let perhg = RestPercent('2020-06-01T20:00:00','2020-09-09T08:00:00');;
 		let perend = RestPercent('2020-02-24T00:00:00','2021-09-02T00:00:00');
 		return (
 				<div className="holiday">
