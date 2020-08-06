@@ -12,7 +12,8 @@
   flex-direction: column;
   display:flex;
   margin:auto;
-  background-color:rgba(70,61,62,0.5);
+  background-color:rgb(163,157,157);
+  width:100%;
 }
 
 .App-logo {
@@ -26,31 +27,42 @@
   align-items: center;
   flex-direction: row;
   width:100%;
-	height: 30vh;
+	height: 30%;
 }
 
 .App-body {
   display: flex;
-	width: 100%;
+	width: 90%;
 	background-color:rgb(70,61,62);
   flex-direction: column;
   justify-content: center;
   align-items: center;
 	color:white;
-	height: 40vh;
+	height: 10%;
+	padding: 5% 5% 0 5%;
 
 }
 .Text-body {
 	color: white;	
-	margin:8px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 2% 0px;
 }
 .App-footer {
-	height: 30vh;
+	height: 35%;
   display: flex;
 	width: 100%;
   justify-content: space-around;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+}
+.App-Contact {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	width:100%;
+	background-color:#C0C0C0;
+    padding:3% 0 3% 0;
+	margin:0 5% 0 5%;
 }
 
 .App-link {
@@ -74,17 +86,20 @@ p {
 	margin: 0;
 }
 
-.holiday {
+.App-Holiday {
 	display:flex;
 	flex-direction:row;
 	width:100%;
-	height:40%;
+	height:25%;
 	justify-content:space-around;
+	background-color:rgb(70,61,62);
+	color:white;
+	padding:5% 0 0 0;
 }
 
 #plans {
-	height:40px;
-	width:120px;
+	height:40px ;
+	width:80% ;
 	border-radius:5px;
 	border:0px solid white;
 	background-color:lightgreen;
