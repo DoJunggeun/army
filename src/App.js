@@ -138,11 +138,11 @@ class Footer extends Component {
 function Contact() {
 	return (
 		<div className="App-Contact">
-			<img style={{width:40, ratio:1}} src={email} onClick={() => window.open('mailto:jg.do@snu.ac.kr')}/>
-			<img style={{width:40, ratio:1}} src={facebook} onClick={() => window.open('https://www.facebook.com/gs12049')}/>
-			<img style={{width:40, ratio:1}} src={instagram} onClick={() => window.open('https://www.instagram.com/dojunggeun/')}/>
-			<img style={{width:40, ratio:1}} src={github} onClick={() => window.open('https://github.com/dojunggeun')}/>
-			<img style={{width:40, ratio:1}} src={linkedin} onClick={() => window.open('https://kr.linkedin.com/in/dojunggeun')}/>
+			<img style={{width:38, height:38}} src={email} onClick={() => window.open('mailto:jg.do@snu.ac.kr')}/>
+			<img style={{width:38, height:38}} src={facebook} onClick={() => window.open('https://www.facebook.com/gs12049')}/>
+			<img style={{width:38, height:38}} src={instagram} onClick={() => window.open('https://www.instagram.com/dojunggeun/')}/>
+			<img style={{width:38, height:38}} src={github} onClick={() => window.open('https://github.com/dojunggeun')}/>
+			<img style={{width:38, height:38}} src={linkedin} onClick={() => window.open('https://kr.linkedin.com/in/dojunggeun')}/>
 		</div>
 	)
 }
@@ -183,7 +183,7 @@ function RestPercent(_start, _end) {
 	const today = new Date();
 	const start = new Date(_start);
 	const end = new Date(_end);
-	let per = ((today.getTime()-start.getTime())/(end.getTime()-start.getTime())*100).toFixed(2);
+	let per = ((today.getTime()-today.getTimezoneOffset()-start.getTime())/(end.getTime()-start.getTime())*100).toFixed(2);
 	if (per < 0) return 0;
 	if (per > 100) return 100;
 	return per
