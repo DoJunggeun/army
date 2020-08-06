@@ -1,7 +1,7 @@
 {
-  "main.css": "/army/static/css/main.6d530cd0.chunk.css",
-  "main.js": "/army/static/js/main.bdb24e42.chunk.js",
-  "main.js.map": "/army/static/js/main.bdb24e42.chunk.js.map",
+  "main.css": "/army/static/css/main.1d75e78c.chunk.css",
+  "main.js": "/army/static/js/main.2bfc9943.chunk.js",
+  "main.js.map": "/army/static/js/main.2bfc9943.chunk.js.map",
   "static/js/1.8a83497f.chunk.js": "/army/static/js/1.8a83497f.chunk.js",
   "static/js/1.8a83497f.chunk.js.map": "/army/static/js/1.8a83497f.chunk.js.map",
   "runtime~main.js": "/army/static/js/runtime~main.c956bf41.js",
@@ -11,8 +11,8 @@
   "static/media/logo.svg": "/army/static/media/logo.5d5d9eef.svg",
   "static/media/profile.jpg": "/army/static/media/profile.632bd4b4.jpg",
   "static/media/github.png": "/army/static/media/github.d22ee372.png",
-  "static/css/main.6d530cd0.chunk.css.map": "/army/static/css/main.6d530cd0.chunk.css.map",
+  "static/css/main.1d75e78c.chunk.css.map": "/army/static/css/main.1d75e78c.chunk.css.map",
   "index.html": "/army/index.html",
-  "precache-manifest.f7e99ff5933f95566055e6d62d4455ab.js": "/army/precache-manifest.f7e99ff5933f95566055e6d62d4455ab.js",
+  "precache-manifest.228be6d6e35b8135d12e40a968b555ff.js": "/army/precache-manifest.228be6d6e35b8135d12e40a968b555ff.js",
   "service-worker.js": "/army/service-worker.js"
 }
