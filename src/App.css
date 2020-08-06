@@ -12,7 +12,7 @@
   flex-direction: column;
   display:flex;
   margin:auto;
-  background-color:rgba(75,66,67,0.45);
+  background-color:rgba(70,61,62,0.5);
 }
 
 .App-logo {
@@ -26,7 +26,7 @@
   align-items: center;
   flex-direction: row;
   width:100%;
-	height: 30%;
+	height: 30vh;
 }
 
 .App-body {
@@ -37,7 +37,7 @@
   justify-content: center;
   align-items: center;
 	color:white;
-	height: 40%;
+	height: 40vh;
 
 }
 .Text-body {
@@ -45,7 +45,7 @@
 	margin:8px;
 }
 .App-footer {
-	height: 30%;
+	height: 30vh;
   display: flex;
 	width: 100%;
   justify-content: space-around;
@@ -53,21 +53,6 @@
   align-items: center;
 }
 
-/* @media screen and (min-height:781px) {
-	.App-body {
-		height:312px;
-
-	}
-	.App-header {
-		height:233px;
-
-	}
-	.App-footer {
-		height:100%;
-	}
-
-}
- */
 .App-link {
   color: #61dafb;
 }
@@ -106,6 +91,7 @@ p {
 	color:rgb(70,61,62);
 	font-weight:600;
 	margin:10px;
+	font-size:15px;
 }
 #plans:hover{
 	border:0px solid white;
