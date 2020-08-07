@@ -183,7 +183,7 @@ function RestPercent(_start, _end) {
 	const today = new Date();
 	const start = new Date(_start);
 	const end = new Date(_end);
-	let per = ((today.getTime()-today.getTimezoneOffset()-start.getTime())/(end.getTime()-start.getTime())*100).toFixed(2);
+	let per = ((today.getTime()-today.getTimezoneOffset()*60000-start.getTime())/(end.getTime()-start.getTime())*100).toFixed(2);
 	if (per < 0) return 0;
 	if (per > 100) return 100;
 	return per
