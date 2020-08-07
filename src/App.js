@@ -7,6 +7,7 @@ import instagram from './instagram.png';
 import github from './github.png';
 import email from './gmail.png';
 import linkedin from './linkedin.png';
+import coke from './coke.png';
 
 class App extends Component {
   render() {
@@ -30,7 +31,8 @@ class Header extends Component {
 			<div className="myname" style={{flexDirection:'row'}}>
 				<img src={ require('./profile.jpg') } style={{height:140, ratio:1}}/>
 			</div>
-				<div style={{flexDirection:'row'}}>
+				<div style={{flexDirection:'row', position:'relative'}} onClick={() => window.open('supertoss://send?bank=국민&accountNo=59730204202313&origin=linkgen&amount=1000&msg=%EC%BD%9C%EB%9D%BC%EC%82%AC%EC%A3%BC%EA%B8%B0')}>
+						<div style={{display:'flex',width:88.5,height:32, backgroundColor:'#C0C0C0', border:'#C0C0C0 1px soild', borderRadius:6, position:'absolute', top:-35, right:0}}><div style={{marginLeft:'auto', marginRight:0, marginBottom:'auto', marginTop:'auto'}}>give me </div><img src={coke} style={{width:18, height:18, margin:'auto', marginLeft:0}} /></div>
 						<div style={{fontSize:30, marginBottom:'7%'}}>{level()} <strong>도정근</strong></div>
 						<div style={{fontSize:15}}><span>입대일</span> <span>2020.02.24</span></div>
 						<div style={{fontSize:15}}><span>전역일</span> <span>2021.09.02</span></div>
@@ -50,8 +52,8 @@ class Body extends Component {
 					<span className="Text-body" style={{alignSelf:'flex-start'}}>전역 D-{RestDays()}</span>
 					<span className="Text-body" style={{alignSelf:'flex-end'}}>2021.09.02</span>
 				</div>
-				<div style={{height:13, width:'100%', backgroundColor:'white', position:'relative'}}>
-					<div style={{height:13, width:per+'%', backgroundColor:'lightgreen', textAlign:'center', position:'absolute'}}><span style={{marginLeft:'auto', marginRight:'auto', color:'black', fontSize:11, fontWeight:700, position:'absolute', }}>{per}%</span>
+				<div style={{height:15, width:'100%', backgroundColor:'white', position:'relative'}}>
+					<div style={{height:15, width:per+'%', backgroundColor:'lightgreen', textAlign:'center', position:'absolute'}}><span style={{marginLeft:'auto', marginRight:'auto', color:'black', fontSize:13, fontWeight:600, position:'absolute', }}>{per}%</span>
 					</div>
 				</div>
 			</div>
@@ -114,8 +116,8 @@ function EachHoliday(props) {
 				<span className="Text-body" style={{alignSelf:'flex-start', fontSize:12}}>{props.desc}</span>
 				<span className="Text-body" style={{alignSelf:'flex-end', fontSize:12}}>{new Date(props.date).format('yyyy.MM.dd')}</span>
 			</div>
-			<div style={{height:10, width:'80%', backgroundColor:'white', marginBottom:12, marginLeft:'auto', marginRight:'auto', textAlign:'right'}}>
-				<div style={{height:10, width:props.percent+'%', backgroundColor:'lightgreen'}}></div>
+			<div style={{height:5, width:'80%', backgroundColor:'white', marginBottom:12, marginLeft:'auto', marginRight:'auto', textAlign:'right'}}>
+				<div style={{height:5, width:props.percent+'%', backgroundColor:'lightgreen'}}></div>
 				<span style={{fontSize:11, color:'black', position:'relative', color:'white'}}>{props.percent}%</span>
 			</div>
 
@@ -150,8 +152,8 @@ function Contact() {
 class Plan extends Component {
 	render() {
 		return (
-		<div style={{width:'100%', justifyContent:'center', color:'white'}}>
-			<button id="plans" onClick={() => window.open('https://www.notion.so/dojunggeun/45bb492763b446ef901d16d52a6425fb')}>출타 계획 보기</button>
+		<div style={{width:'100%', justifyContent:'center'}}><button
+onClick={() => window.open("https://www.notion.so/dojunggeun/45bb492763b446ef901d16d52a6425fb")} id="plans">출타 계획 보기</button>
 		</div>
 		)
 	}
@@ -161,9 +163,9 @@ class Days extends Component {
 	render() {
 		return (
 		<div style={{flexDirection:'column', width:'100%', alignItems:'center'}}>
-			<div style={{display:'flex',justifyContent:'space-between', padding:'1% 5% 1% 5%'}}><span>전체 복무일</span><span>557</span></div><hr style={{margin:'0 5% 0 5%', border:'solid 1px lightgray', borderRadius:'1px'}}/>
-			<div style={{display:'flex',justifyContent:'space-between', padding:'1% 5% 1% 5%'}}><span>현재 복무일</span><span>{UntilNow()}</span></div><hr style={{margin:'0 5% 0 5%', border:'solid 1px lightgray', borderRadius:'1px'}}/>
-			<div style={{display:'flex',justifyContent:'space-between', padding:'1% 5% 1% 5%'}}><span>남은 복무일</span><span>{RestDays()}</span></div><hr style={{margin:'0 5% 0 5%', border:'solid 1px lightgray', borderRadius:'1px'}}/>
+			<div style={{display:'flex',justifyContent:'space-between', padding:'1% 6% 1% 6%'}}><span>전체 복무일</span><span>557</span></div><hr style={{margin:'0 5% 1% 5%', border:'solid 1px lightgray', borderRadius:'1px'}}/>
+			<div style={{display:'flex',justifyContent:'space-between', padding:'1% 6% 1% 6%'}}><span>현재 복무일</span><span>{UntilNow()}</span></div><hr style={{margin:'0 5% 1% 5%', border:'solid 1px lightgray', borderRadius:'1px'}}/>
+			<div style={{display:'flex',justifyContent:'space-between', padding:'1% 6% 1% 6%'}}><span>남은 복무일</span><span>{RestDays()}</span></div><hr style={{margin:'0 5% 1% 5%', border:'solid 1px lightgray', borderRadius:'1px'}}/>
 		</div>
 		)
 	}
