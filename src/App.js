@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+
 import './App.css';
 import Moment from 'react-moment';
 import facebook from './facebook.png';
@@ -29,13 +29,13 @@ class Header extends Component {
     return (
         <div className="App-header">
 			<div className="myname" style={{flexDirection:'row'}}>
-				<img src={ require('./profile.jpg') } style={{height:140, ratio:1}}/>
+				<img alt="my pic" src={ require('./profile.jpg') } style={{height:140, ratio:1}}/>
 			</div>
-				<div style={{flexDirection:'row', position:'relative'}} onClick={() => window.open('supertoss://send?bank=국민&accountNo=59730204202313&origin=linkgen&amount=1000&msg=%EC%BD%9C%EB%9D%BC%EC%82%AC%EC%A3%BC%EA%B8%B0')}>
-						<div style={{display:'flex',width:88.5,height:32, backgroundColor:'#C0C0C0', border:'#C0C0C0 1px soild', borderRadius:6, position:'absolute', top:-35, right:0}}><div style={{marginLeft:'auto', marginRight:0, marginBottom:'auto', marginTop:'auto'}}>give me </div><img src={coke} style={{width:18, height:18, margin:'auto', marginLeft:0}} /></div>
-						<div style={{fontSize:30, marginBottom:'7%'}}>{level()} <strong>도정근</strong></div>
-						<div style={{fontSize:15}}><span>입대일</span> <span>2020.02.24</span></div>
-						<div style={{fontSize:15}}><span>전역일</span> <span>2021.09.02</span></div>
+				<div style={{flexDirection:'row', position:'relative'}}>
+						<div style={{display:'flex',width:88.5,height:32, backgroundColor:'#C0C0C0', border:'#C0C0C0 1px soild', borderRadius:6, position:'absolute', top:-35, right:0}} onClick={() => window.open('supertoss://send?bank=국민&accountNo=59730204202313&origin=linkgen&amount=1000&msg=%EC%BD%9C%EB%9D%BC%EC%82%AC%EC%A3%BC%EA%B8%B0')}><div style={{marginLeft:'auto', marginRight:0, marginBottom:'auto', marginTop:'auto'}}>give me </div><img alt="coke" src={coke} style={{width:18, height:18, margin:'auto', marginLeft:0}} /></div>
+						<div style={{fontSize:32, marginBottom:'7%'}}>{level()} <strong>도정근</strong></div>
+						<div style={{fontSize:16, display:'flex', justifyContent:'space-evenly', alignItems:'center'}}><span>입대일</span> <span>2020.02.24</span></div>
+						<div style={{fontSize:16, display:'flex', justifyContent:'space-evenly', alignItems:'center'}}><span>전역일</span> <span>2021.09.02</span></div>
 				</div>
 
         </div>
@@ -45,15 +45,15 @@ class Header extends Component {
 
 class Body extends Component {
 	render() {
-		const per = RestPercent('2020-02-24T00:00:00','2021-09-02T00:00:00');
+		const per = RestPercent('2020-02-24T00:00:00+09:00','2021-09-02T00:00:00+09:00');
 		return (
 			<div className="App-body">
 				<div style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
-					<span className="Text-body" style={{alignSelf:'flex-start'}}>전역 D-{RestDays()}</span>
+					<span className="Text-body" style={{alignSelf:'flex-start'}}>전역 D-{RestDays('2021-09-03T00:00+09:00')}</span>
 					<span className="Text-body" style={{alignSelf:'flex-end'}}>2021.09.02</span>
 				</div>
 				<div style={{height:15, width:'100%', backgroundColor:'white', position:'relative'}}>
-					<div style={{height:15, width:per+'%', backgroundColor:'lightgreen', textAlign:'center', position:'absolute'}}><span style={{marginLeft:'auto', marginRight:'auto', color:'black', fontSize:13, fontWeight:600, position:'absolute', }}>{per}%</span>
+					<div style={{height:15, width:per+'%', backgroundColor:'lightgreen', textAlign:'center', position:'absolute'}}><span style={{marginLeft:'auto', marginRight:'auto', color:'black', fontSize:13, fontWeight:500, position:'absolute', }}>{per}%</span>
 					</div>
 				</div>
 			</div>
@@ -92,7 +92,6 @@ class Holiday extends Component {
 		const perholi = RestPercent(preholi,nextholi);
 		const peryerin = RestPercent(preyerin,nextyerin);
 		const perhg = RestPercent(prehg,nexthg);
-		const perend = RestPercent('2020-02-24T00:00:00','2021-09-02T00:00:00');
 		
 		return (
 				<div className="App-Holiday">
@@ -113,21 +112,22 @@ function EachHoliday(props) {
 	return (
 		<div style={{marginBottom:'22%'}}>
 			<div style={{width:'80%', display:'flex', flexDirection:'row', justifyContent:'space-between', paddingLeft:'10%'}}>
-				<span className="Text-body" style={{alignSelf:'flex-start', fontSize:12}}>{props.desc}</span>
-				<span className="Text-body" style={{alignSelf:'flex-end', fontSize:12}}>{new Date(props.date).format('yyyy.MM.dd')}</span>
+				<span style={{alignSelf:'flex-start', fontSize:12, fontWeight:500}}>{props.desc}</span>
+				<span style={{alignSelf:'flex-end', fontSize:11}}>{new Date(props.date).format('yyyy.MM.dd')}</span>
 			</div>
 			<div style={{height:5, width:'80%', backgroundColor:'white', marginBottom:12, marginLeft:'auto', marginRight:'auto', textAlign:'right'}}>
 				<div style={{height:5, width:props.percent+'%', backgroundColor:'lightgreen'}}></div>
-				<span style={{fontSize:11, color:'black', position:'relative', color:'white'}}>{props.percent}%</span>
+				<div style={{display:'flex', justifyContent:'space-between', position:'relative', top:3}}>
+					<span style={{fontSize:11, position:'relative', color:'white'}}>{props.percent}%</span>
+					<span style={{fontSize:11, position:'relative', color:'white'}}>D-{RestDays(props.date)}</span>
+				</div>
 			</div>
-
 		</div>
 	)
 }
 
 class Footer extends Component {
 	render() {
-		const date = new Date();
 		return (
 			<div className="App-footer">
 				<Days />
@@ -140,11 +140,11 @@ class Footer extends Component {
 function Contact() {
 	return (
 		<div className="App-Contact">
-			<img style={{width:38, height:38}} src={email} onClick={() => window.open('mailto:jg.do@snu.ac.kr')}/>
-			<img style={{width:38, height:38}} src={facebook} onClick={() => window.open('https://www.facebook.com/gs12049')}/>
-			<img style={{width:38, height:38}} src={instagram} onClick={() => window.open('https://www.instagram.com/dojunggeun/')}/>
-			<img style={{width:38, height:38}} src={github} onClick={() => window.open('https://github.com/dojunggeun')}/>
-			<img style={{width:38, height:38}} src={linkedin} onClick={() => window.open('https://kr.linkedin.com/in/dojunggeun')}/>
+			<img alt="mail" style={{width:38, height:38}} src={email} onClick={() => window.open('mailto:jg.do@snu.ac.kr')}/>
+			<img alt="facebook" style={{width:38, height:38}} src={facebook} onClick={() => window.open('https://www.facebook.com/gs12049')}/>
+			<img alt="instagram" style={{width:38, height:38}} src={instagram} onClick={() => window.open('https://www.instagram.com/dojunggeun/')}/>
+			<img alt="github" style={{width:38, height:38}} src={github} onClick={() => window.open('https://github.com/dojunggeun')}/>
+			<img alt="linkedin" style={{width:38, height:38}} src={linkedin} onClick={() => window.open('https://kr.linkedin.com/in/dojunggeun')}/>
 		</div>
 	)
 }
@@ -165,7 +165,7 @@ class Days extends Component {
 		<div style={{flexDirection:'column', width:'100%', alignItems:'center'}}>
 			<div style={{display:'flex',justifyContent:'space-between', padding:'1% 6% 1% 6%'}}><span>전체 복무일</span><span>557</span></div><hr style={{margin:'0 5% 1% 5%', border:'solid 1px lightgray', borderRadius:'1px'}}/>
 			<div style={{display:'flex',justifyContent:'space-between', padding:'1% 6% 1% 6%'}}><span>현재 복무일</span><span>{UntilNow()}</span></div><hr style={{margin:'0 5% 1% 5%', border:'solid 1px lightgray', borderRadius:'1px'}}/>
-			<div style={{display:'flex',justifyContent:'space-between', padding:'1% 6% 1% 6%'}}><span>남은 복무일</span><span>{RestDays()}</span></div><hr style={{margin:'0 5% 1% 5%', border:'solid 1px lightgray', borderRadius:'1px'}}/>
+			<div style={{display:'flex',justifyContent:'space-between', padding:'1% 6% 1% 6%'}}><span>남은 복무일</span><span>{RestDays('2021-09-03T00:00+09:00')}</span></div><hr style={{margin:'0 5% 1% 5%', border:'solid 1px lightgray', borderRadius:'1px'}}/>
 		</div>
 		)
 	}
@@ -175,17 +175,17 @@ class Days extends Component {
 
 function UntilNow() {
 	const date = new Date();
-	return <Moment diff="2020-02-23T14:00" unit="days">{date}</Moment>;
+	return <Moment diff="2020-02-23T14:00+09:00" unit="days">{date}</Moment>;
 }
-function RestDays() {
+function RestDays(end) {
 	const date = new Date();
-	return <Moment diff={date} unit="days">2021-09-03T00:00</Moment>
+	return <Moment diff={date} unit="days">{end}</Moment>
 }
 function RestPercent(_start, _end) {
 	const today = new Date();
 	const start = new Date(_start);
 	const end = new Date(_end);
-	let per = ((today.getTime()-today.getTimezoneOffset()*60000-start.getTime())/(end.getTime()-start.getTime())*100).toFixed(2);
+	let per = ((today.getTime()-start.getTime())/(end.getTime()-start.getTime())*100).toFixed(2);
 	if (per < 0) return 0;
 	if (per > 100) return 100;
 	return per
@@ -199,24 +199,24 @@ function isAfterNow(date) {
 }
 
 function level() {
-	let level3 = '2020-11-01T00:00:00'
-	let level4 = '2021-05-01T00:00:00'
+	let level3 = '2020-11-01T00:00:00+09:00'
+	let level4 = '2021-05-01T00:00:00+09:00'
 	if (!isAfterNow(level4)) return '병장';
 	if (!isAfterNow(level3)) return '상병';
 	return '일병'	
 }
 
 const holidays = [
-	['2020-06-01T20:00:00','휴가',true],
-	['2020-06-27T20:00:00','주말외출',true],
-	['2020-07-15T21:00:00','평일외출',false],
-	['2020-07-21T21:00:00','평일외출',false],
-	['2020-07-26T20:00:00','주말외출',true],
-	['2020-08-08T08:00:00','주말외출',true],
-	['2020-08-14T17:30:00','평일외출',false],
-	['2020-08-31T17:30:00','평일외출',true],
-	['2020-09-04T17:30:00','평일외출',false],
-	['2020-09-09T08:00:00','휴가',false]
+	['2020-06-01T20:00:00+09:00','휴가',true],
+	['2020-06-27T20:00:00+09:00','주말외출',true],
+	['2020-07-15T21:00:00+09:00','평일외출',false],
+	['2020-07-21T21:00:00+09:00','평일외출',false],
+	['2020-07-26T20:00:00+09:00','주말외출',true],
+	['2020-08-08T08:00:00+09:00','주말외출',true],
+	['2020-08-14T17:30:00+09:00','평일외출',false],
+	['2020-08-31T17:30:00+09:00','평일외출',true],
+	['2020-09-04T17:30:00+09:00','평일외출',false],
+	['2020-09-09T08:00:00+09:00','휴가',false]
 ]
 
 

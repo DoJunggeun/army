@@ -44,7 +44,8 @@
 
 }
 .Text-body {
-	color: white;	
+	color: white;
+	font-weight:500;
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 2% 0px;
 }
@@ -105,16 +106,16 @@ p {
 	height:40px ;
 	width:80% ;
 	border-radius:5px;
-	border:0px solid white;
+	border:0px solid lightgreen;
 	background-color:lightgreen;
 	color:rgb(70,61,62);
-	font-weight:600;
+	font-weight:500;
 	margin:10px;
-	font-size:15px;
+	font-size:1.2rem;
 }
 #plans:hover{
-	border:0px solid white;
-	background-color:white;
-	color:rgb(70,61,62);
+	border:0px solid lightgreen;
+	background-color:lightgreen;
+	color:rgba(70,61,62);
 	font-weight:500;
 }

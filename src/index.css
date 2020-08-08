@@ -15,7 +15,7 @@ body {
 	} 
 }
 
-@media screen and (max-height: 550) {
+@media screen and (max-height: 550px) {
 	html, body { 
 		  height: 550px;
 	} 
