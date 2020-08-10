@@ -175,7 +175,7 @@ class Days extends Component {
 
 function UntilNow() {
 	const date = new Date();
-	return <Moment diff="2020-02-23T14:00+09:00" unit="days">{date}</Moment>;
+	return <Moment diff="2020-02-23T00:00+09:00" unit="days">{date}</Moment>;
 }
 function RestDays(end) {
 	const date = new Date();
