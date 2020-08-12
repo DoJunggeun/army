@@ -1,7 +1,7 @@
 {
-  "main.css": "/army/static/css/main.cf9508ac.chunk.css",
-  "main.js": "/army/static/js/main.6f771140.chunk.js",
-  "main.js.map": "/army/static/js/main.6f771140.chunk.js.map",
+  "main.css": "/army/static/css/main.858213fb.chunk.css",
+  "main.js": "/army/static/js/main.e134c715.chunk.js",
+  "main.js.map": "/army/static/js/main.e134c715.chunk.js.map",
   "static/js/1.da240d84.chunk.js": "/army/static/js/1.da240d84.chunk.js",
   "static/js/1.da240d84.chunk.js.map": "/army/static/js/1.da240d84.chunk.js.map",
   "runtime~main.js": "/army/static/js/runtime~main.c956bf41.js",
@@ -11,8 +11,8 @@
   "static/media/coke.png": "/army/static/media/coke.5b0af22f.png",
   "static/media/profile.jpg": "/army/static/media/profile.632bd4b4.jpg",
   "static/media/github.png": "/army/static/media/github.d22ee372.png",
-  "static/css/main.cf9508ac.chunk.css.map": "/army/static/css/main.cf9508ac.chunk.css.map",
+  "static/css/main.858213fb.chunk.css.map": "/army/static/css/main.858213fb.chunk.css.map",
   "index.html": "/army/index.html",
-  "precache-manifest.e8c39c57b6f645408dbb6ba377cbd477.js": "/army/precache-manifest.e8c39c57b6f645408dbb6ba377cbd477.js",
+  "precache-manifest.1d2b65080c4afad3473b371408661257.js": "/army/precache-manifest.1d2b65080c4afad3473b371408661257.js",
   "service-worker.js": "/army/service-worker.js"
 }
