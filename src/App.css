@@ -65,8 +65,9 @@
     height: 40px;
     background-color: #c0c0c0;
     padding: 3% 0 3% 0;
-    border: 1px solid #c0c0c0;
+    border: 2px solid #c0c0c0;
     border-radius: 5px;
+	border-style:outset;
 }
 
 .App-link {
@@ -105,7 +106,8 @@ p {
     height: 40px;
     width: 80%;
     border-radius: 5px;
-    border: 0px solid lightgreen;
+    border: 2px solid lightgreen;
+	border-style:outset;
     background-color: lightgreen;
     color: rgb(70, 61, 62);
     font-weight: 500;
@@ -113,7 +115,8 @@ p {
     font-size: 1.2rem;
 }
 #plans:hover {
-    border: 0px solid lightgreen;
+	border-style:inset;
+    border: 2px solid lightgreen;
     background-color: lightgreen;
     color: rgba(70, 61, 62);
     font-weight: 500;

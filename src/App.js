@@ -32,21 +32,23 @@ class Header extends Component {
                     <img
                         alt="my pic"
                         src={require('./profile.jpg')}
-                        style={{ height: 140, ratio: 1 }}
+                        style={{ height: 140, width:140, borderRadius:70 }}
                     />
                 </div>
                 <div style={{ flexDirection: 'row', position: 'relative' }}>
                     <div
                         style={{
                             display: 'flex',
-                            width: 88.5,
-                            height: 32,
+                            width: 80,
+                            height: 30,
                             backgroundColor: '#C0C0C0',
                             border: '#C0C0C0 1px soild',
                             borderRadius: 6,
                             position: 'absolute',
                             top: -35,
                             right: 0,
+							borderStyle:'outset',
+							alignItems:'center'
                         }}
                         onClick={() =>
                             window.open(
