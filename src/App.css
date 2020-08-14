@@ -106,7 +106,7 @@ p {
     height: 40px;
     width: 80%;
     border-radius: 5px;
-    border: 2px solid lightgreen;
+    border: 1px solid lightgreen;
 	border-style:outset;
     background-color: lightgreen;
     color: rgb(70, 61, 62);
@@ -116,7 +116,7 @@ p {
 }
 #plans:hover {
 	border-style:inset;
-    border: 2px solid lightgreen;
+    border: 1px solid lightgreen;
     background-color: lightgreen;
     color: rgba(70, 61, 62);
     font-weight: 500;
