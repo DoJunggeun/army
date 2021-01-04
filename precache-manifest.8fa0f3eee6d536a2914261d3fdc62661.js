@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/army/static/js/runtime~main.c956bf41.js"
   },
   {
-    "revision": "ac8cb4977297e2bd0861",
-    "url": "/army/static/js/main.ac8cb497.chunk.js"
+    "revision": "5c4c3a37dae66ff19bca",
+    "url": "/army/static/js/main.5c4c3a37.chunk.js"
   },
   {
     "revision": "da240d84bb8e046d1244",
     "url": "/army/static/js/1.da240d84.chunk.js"
   },
   {
-    "revision": "ac8cb4977297e2bd0861",
+    "revision": "5c4c3a37dae66ff19bca",
     "url": "/army/static/css/main.906daae1.chunk.css"
   },
   {
-    "revision": "01ab9dd8b5797053760a106c3d5d8c24",
+    "revision": "2bf2427e6d78d9833335dae214d36e22",
     "url": "/army/index.html"
   }
 ];
